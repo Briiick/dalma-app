@@ -9,20 +9,21 @@ h2{font:500 12px/1.4 "IBM Plex Mono",monospace;letter-spacing:.2em;text-transfor
 p,li{color:var(--text)}em{font-style:italic}a{color:var(--accent)}code{font:15px "IBM Plex Mono",monospace}
 .lede{color:var(--muted);font-size:19px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:24px 0}
 footer{margin-top:56px;color:var(--faint);font:12px/1.6 "IBM Plex Mono",monospace;letter-spacing:.06em}</style></head><body><main><header><img src="../icon.png" alt=""><a href="../">Dalma</a></header><h1>Privacy</h1>
-<p><strong>Effective:</strong> 24 September 2026
+<p><strong>Effective:</strong> 15 October 2026
 <strong>Who:</strong> Alexander Bricken, the developer of Dalma ("we").</p>
 <h2>The short version</h2>
-<p>Two things leave your phone, both to Apple. What you type into search goes to Apple Maps to find
-addresses, with a rough box around the city map in use. And when you tap <em>Download</em> for London or San
-Francisco, your phone asks Apple for that city's map, so Apple can see which city's map was fetched.
-Once a city's map is on your phone, iOS may later fetch a newer version of it from Apple on its own.
-That also tells Apple only which city's map it is. Dalma never sends your position, your logbook places
-or your notes. While a bearing is set, iOS may show the destination's name, distance and bearing on your
-own paired Apple Watch, Mac or CarPlay, as it does for any Live Activity. If you use Dalma on Apple
-Watch, your iPhone sends the watch the destination's name, the distance and the bearing, and the watch
-uses its approximate location only to find north. Neither leaves your devices. We have no server, no
-accounts and no analytics, so we never see where you are, where you have been, what you searched for, or
-what you wrote.</p>
+<p>Three things leave your phone. What you type into search goes to Apple Maps to find addresses, with a
+rough box around the city map in use. When you tap <em>Download</em> for London or San Francisco, your phone
+asks Apple for that city's map, so Apple can see which city's map was fetched. Once a city's map is on
+your phone, iOS may later fetch a newer version of it from Apple on its own. That also tells Apple only
+which city's map it is. And when you share a place to Dalma from another app, the shared address or
+place name goes to Apple Maps, or the shared link is fetched once, with no cookies, from its own site
+and from any site it redirects to. Dalma never sends your position, your logbook places or your notes. While a bearing is set,
+iOS may show the destination's name, distance and bearing on your own paired Apple Watch, Mac or
+CarPlay, as it does for any Live Activity. If you use Dalma on Apple Watch, your iPhone sends the watch
+the destination's name, the distance and the bearing, and the watch uses its approximate location only
+to find north. Neither leaves your devices. We have no server, no accounts and no analytics, so we
+never see where you are, where you have been, what you searched for, or what you wrote.</p>
 <h2>What Dalma uses, and where it stays</h2>
 <ul>
 <li><strong>Your location.</strong> Dalma uses your position to point the needle and measure the straight-line
@@ -42,6 +43,15 @@ what you wrote.</p>
   Maps request does, and Apple handles it under Apple's own privacy policy. We never receive it.</li>
 <li><strong>Tapping the map.</strong> A point you tap on the map stays on your phone. Dalma doesn't look up what is
   there.</li>
+<li><strong>Places shared from other apps.</strong> When you pick Dalma in another app's share sheet, Dalma reads what
+  you shared to find one place. A shared address or place name goes to Apple Maps as text, with no area
+  and no position. A shared web page or short map link is fetched once, with no cookies. A link that
+  redirects, as a short link does, is followed, so the site it leads to is asked too. Each request
+  carries only the address it asks for, and leaves from your phone as it would from a browser. One
+  share fetches at most three links. An address or place name found on a page goes to Apple Maps the
+  same way.
+  A link or text that already holds coordinates is read on your phone, and nothing is sent. The place
+  Dalma finds stays on your phone. We never receive any of it.</li>
 <li><strong>The Lock Screen.</strong> While a bearing is set, the Lock Screen and the Dynamic Island show the name of
   where you are going, the straight-line distance and the bearing, and, when water is in the way, the
   line that names the bridge. Your phone draws them itself, and nothing is sent to us. As it does for
@@ -71,15 +81,19 @@ what you wrote.</p>
 </ul>
 <h2>What we collect</h2>
 <p>Nothing. Dalma sends nothing to us. Apart from what your iPhone tells your own Apple Watch, the only
-things it sends anyone are the two requests described above, both to Apple: the search text, to which
-Dalma adds nothing but the rough box around the map area, and the request for a city's map, or for a
-newer version of one, which names only the city. Dalma adds no identifier, no position and no usage data
-to either. It contains no advertising, no tracking and no third-party analytics.</p>
+things it sends anyone are the requests described above: the search text, to Apple Maps, to which
+Dalma adds nothing but the rough box around the map area; the request for a city's map, or for a newer
+version of one, to Apple, which names only the city; and, when you share a place to Dalma, the shared
+address or place name, to Apple Maps, or one fetch of the shared link, from its own site and any it
+redirects to. Dalma adds no
+identifier, no position and no usage data to any of them. It contains no advertising, no tracking and
+no third-party analytics.</p>
 <p>If you choose to share crash reports and app analytics with developers in your iPhone's settings,
 Apple collects those under Apple's own privacy policy. They don't include your logbook.</p>
 <h2>Sharing and export</h2>
-<p>Dalma has no sharing feature. You can export your logbook as a GeoJSON or GPX file from Settings.
-The file goes wherever you send it through the share sheet. We never receive it.</p>
+<p>Dalma never sends your places or your notes to anyone. Another app can share a place to Dalma, as
+described above. You can export your logbook as a GeoJSON or GPX file from Settings. The file goes
+wherever you send it through the share sheet. We never receive it.</p>
 <h2>Deleting your data</h2>
 <p>Remove a place from the logbook inside the app. Remove a downloaded city's map in Settings, under
 <em>City packs</em>. Delete the app to erase everything Dalma stored, the downloaded maps included.</p>
@@ -89,9 +103,10 @@ The file goes wherever you send it through the share sheet. We never receive it.
 <p>Dalma's city maps are made from OpenStreetMap data (ODbL 1.0) and the Protomaps basemap, and drawn
 with MapLibre Native. New York City's comes inside the app. London's and San Francisco's come from
 Apple, first when you tap <em>Download</em>, and after that when iOS fetches a newer version. Every map is
-read from your phone, and nothing else is fetched from the internet except the address search above.</p>
+read from your phone, and nothing else is fetched from the internet except the address search and a
+shared place's lookup, both above.</p>
 <h2>Changes</h2>
-<p>If a later version changes any of this, for example by adding sharing, we will update this policy and
-the App Store privacy details before that version is released.</p>
+<p>If a later version changes any of this, for example by adding a way to send a bearing or a place to
+someone, we will update this policy and the App Store privacy details before that version is released.</p>
 <h2>Contact</h2>
 <p><a href="mailto:alex.bricken@icloud.com">alex.bricken@icloud.com</a></p><footer>© 2026 Alexander Bricken · <a href="../support/">Support</a> · <a href="../privacy/">Privacy</a></footer></main></body></html>
